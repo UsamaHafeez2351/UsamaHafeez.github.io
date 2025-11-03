@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usama Hafeez - Portfolio</title>
+    <!-- Add EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -1239,7 +1241,7 @@
             <!-- Fire Safety Training Project -->
             <a href="https://github.com/UsamaHafeez2351/pyro_shield" target="_blank" class="portfolio-item">
                 <div class="portfolio-image">
-                    <img src="data:image/jpeg;base64,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" alt="Fire Safety Training App">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj-UvNfCC7OquZ1H-vqhW79EkRkOeYBVVsMw&s" alt="Fire Safety Training App">
                 </div>
                 <div class="portfolio-content">
                     <h3>Fire Safety Training & Equipment Solution</h3>
@@ -1375,19 +1377,19 @@
             Ready to bring your ideas to life? Get in touch with me for any project or collaboration.
         </p>
         <div class="contact-form">
-            <!-- Formspree Form - Simple and Reliable -->
-            <form id="contactForm" action="https://formspree.io/f/xrbngvbg" method="POST">
+            <!-- EmailJS Form with Correct Service ID -->
+            <form id="contactForm">
                 <div class="form-group">
                     <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="user_name" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="user_email" required>
                 </div>
                 <div class="form-group">
                     <label for="project">Project Type</label>
-                    <input type="text" id="project" name="project" placeholder="e.g., Web Development, Mobile App, Consultation">
+                    <input type="text" id="project" name="project_type" placeholder="e.g., Web Development, Mobile App, Consultation">
                 </div>
                 <div class="form-group">
                     <label for="message">Project Details</label>
@@ -1416,6 +1418,12 @@
     </footer>
 
     <script>
+        // Initialize EmailJS with your public key
+        (function() {
+            emailjs.init("Q6T-lKfQ5Fs2bziEd");
+            console.log("EmailJS initialized with public key");
+        })();
+
         // Skills Typing Animation
         const skills = [
             "Full Stack Developer",
@@ -1585,9 +1593,11 @@
         window.addEventListener('scroll', reveal);
         reveal(); // Initial check
 
-        // Form submission with Formspree - SIMPLE AND RELIABLE
+        // EmailJS Form Submission with CORRECT SERVICE ID
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
+            
+            console.log('Form submission started...');
             
             // Hide previous messages
             document.getElementById('successMessage').style.display = 'none';
@@ -1599,19 +1609,13 @@
             button.textContent = 'Sending...';
             button.disabled = true;
 
-            // Get form data
-            const formData = new FormData(this);
+            console.log('Sending email via EmailJS with service_nnhzs5k...');
             
-            // Send form data using fetch API
-            fetch(this.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.ok) {
+            // Send email using EmailJS with CORRECT SERVICE ID
+            emailjs.sendForm('service_nnhzs5k', 'template_6dsob2p', this)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    
                     // Show success message
                     document.getElementById('successMessage').style.display = 'block';
                     
@@ -1626,25 +1630,22 @@
                     setTimeout(() => {
                         document.getElementById('successMessage').style.display = 'none';
                     }, 5000);
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            })
-            .catch(error => {
-                console.log('Form submission error:', error);
-                
-                // Show error message
-                document.getElementById('errorMessage').style.display = 'block';
-                
-                // Reset button
-                button.textContent = originalText;
-                button.disabled = false;
-                
-                // Hide error message after 5 seconds
-                setTimeout(() => {
-                    document.getElementById('errorMessage').style.display = 'none';
-                }, 5000);
-            });
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    console.log('Error details:', JSON.stringify(error));
+                    
+                    // Show error message
+                    document.getElementById('errorMessage').style.display = 'block';
+                    
+                    // Reset button
+                    button.textContent = originalText;
+                    button.disabled = false;
+                    
+                    // Hide error message after 5 seconds
+                    setTimeout(() => {
+                        document.getElementById('errorMessage').style.display = 'none';
+                    }, 5000);
+                });
         });
 
         // Animate service cards on hover
